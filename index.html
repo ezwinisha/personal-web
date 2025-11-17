@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuromi Cute Sparkle Diary — Nuraina</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pink: #ffb6ff;
+  --soft-pink: #ffd9ff;
+  --purple: #b27eff;
+  --soft-purple:#e9d2ff;
+  --dark:#2d0f39;
+  --white:#fff;
+}
+
+/* reset & base */
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  font-family:"Poppins",sans-serif;
+  background: linear-gradient(180deg, #f9e8ff, #f4dfff, #eed2ff);
+  color:#4a306d;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* sparkle background */
+.sparkles{
+  position:fixed; inset:0; pointer-events:none; z-index:-1;
+  background-image:
+    radial-gradient(circle, rgba(255,182,255,0.6) 2px, transparent 2px),
+    radial-gradient(circle, rgba(255,255,255,0.6) 2px, transparent 2px),
+    radial-gradient(circle, rgba(210,170,255,0.6) 2px, transparent 2px);
+  background-size:200px 200px, 260px 260px, 180px 180px;
+  animation: sparkleMove 12s linear infinite;
+  opacity:0.6;
+}
+@keyframes sparkleMove{
+  0%{background-position:0 0,0 0,0 0;}
+  100%{background-position:200px 300px, -180px 260px, 160px -220px;}
+}
+
+/* header kawaii */
+header{
+  text-align:center;
+  padding:40px 20px;
+}
+header h1{
+  font-size:36px;
+  font-weight:800;
+  color:var(--purple);
+  text-shadow:0 0 10px rgba(178,126,255,0.4);
+}
+header p{
+  color:#6d4d99;
+  font-size:14px;
+}
+
+/* nav */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+  padding:14px;
+}
+nav a{
+  text-decoration:none;
+  color:var(--dark);
+  background:var(--soft-purple);
+  padding:8px 14px;
+  border-radius:20px;
+  font-weight:600;
+  transition:.3s;
+  border:2px solid #ffffffaa;
+}
+nav a:hover{
+  background:var(--pink);
+  color:#fff;
+  box-shadow:0 0 10px var(--pink);
+}
+
+/* sections */
+section{
+  width:90%;
+  max-width:750px;
+  background:white;
+  margin:30px auto;
+  padding:28px;
+  border-radius:25px;
+  box-shadow:0 0 20px rgba(177,140,255,0.3);
+  animation: fadeInUp .8s ease forwards;
+  opacity:0;
+  transform:translateY(20px);
+}
+@keyframes fadeInUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+h2{
+  margin-top:0;
+  color:var(--purple);
+  font-size:22px;
+  text-align:center;
+}
+
+/* profile picture */
+.profile{
+  width:150px;
+  height:150px;
+  object-fit:cover;
+  border-radius:50%;
+  margin:auto;
+  display:block;
+  border:6px solid var(--pink);
+  box-shadow:0 0 15px rgba(255,182,255,0.7);
+}
+
+/* list cards */
+ul{list-style:none; padding:0;}
+li.card{
+  background:var(--soft-purple);
+  padding:12px;
+  margin:10px 0;
+  border-radius:15px;
+  transition:.3s;
+  border:2px solid var(--white);
+}
+li.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 20px rgba(178,126,255,0.3);
+}
+
+/* gallery */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(140px,1fr));
+  gap:14px;
+}
+.gallery img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  border-radius:15px;
+  border:4px solid var(--white);
+  box-shadow:0 0 10px rgba(178,126,255,0.3);
+  transition:.3s;
+}
+.gallery img:hover{
+  transform:scale(1.07);
+}
+
+/* footer */
+footer{
+  text-align:center;
+  padding:20px;
+  color:#6d4d99;
+  font-size:14px;
+}
+
+/* floating Kuromi cute mascot */
+.kuromi{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:110px;
+  animation:float 4s ease-in-out infinite;
+  filter:drop-shadow(0 8px 10px rgba(178,126,255,0.4));
+}
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-14px);}
+}
+
+/* smooth scroll */
+html{
+  scroll-behavior:smooth;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sparkles"></div>
+
+<header>
+  <h1>💗 Kuromi Cute Sparkle Diary 💗</h1>
+  <p>Made with love by Nuraina Ezwinisha</p>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#hobbies">Hobbies</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <img src="profile.jpg" class="profile" alt="Profile Picture">
+  <h2>About Me</h2>
+  <p>Hello! I'm <strong>Nuraina Ezwinisha</strong> 💗  
+  Diploma student of Information Management, UiTM.  
+  I love cute aesthetics, Kuromi, photography and designing!</p>
+</section>
+
+<section id="education">
+  <h2>Education</h2>
+  <ul>
+    <li class="card">🎓 UiTM Kedah — Diploma in Information Management</li>
+    <li class="card">🏫 SMK Sultan Abdullah — SPM Graduate</li>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <ul>
+    <li class="card">✨ Web Design (HTML & CSS)</li>
+    <li class="card">✨ Canva & Creative Editing</li>
+    <li class="card">✨ Data Entry & Information Management</li>
+  </ul>
+</section>
+
+<section id="hobbies">
+  <h2>Hobbies</h2>
+  <ul>
+    <li class="card">💗 Listening to music</li>
+    <li class="card">💗 Taking aesthetic pictures</li>
+    <li class="card">💗 Gaming + exploring cute designs</li>
+  </ul>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="family1.jpg">
+    <img src="photo1.jpg">
+    <img src="photo2.jpg">
+    <img src="photo3.jpg">
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:nurainaezwinisha@gmail.com" style="color:var(--purple); font-weight:600;">nurainaezwinisha@gmail.com</a></p>
+  <p>Instagram: <a href="https://instagram.com" target="_blank" style="color:var(--purple); font-weight:600;">@ezzwinnn</a></p>
+</section>
+
+<footer>
+  © 2025 — Kuromi Cute Sparkle Diary by Nuraina Ezwinisha 💗
+</footer>
+
+<img src="kuromi-icon.png" class="kuromi" alt="Kuromi">
+
+</body>
+</html>
